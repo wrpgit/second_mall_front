@@ -1,0 +1,89 @@
+/* pages/messageList/messageList.wxss */
+
+
+#all{
+  margin: 0;
+}
+#top{
+  position: fixed;
+  top:2rpx;
+  width: 100%;
+  height: 100rpx;
+  z-index: 2;
+  background-color: rgb(1,171,253);
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 90rpx;
+}
+.context{
+  margin: 0;
+  position: relative;
+  top: 102rpx;
+  width:100%;
+  height: 160rpx;
+  /* background-color: #ccc; */
+}
+.head{
+  position: relative;
+  top:10rpx;
+  left: 10rpx;
+  width:120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: blue;
+  display: inline-block;
+}
+.box{
+  position: absolute;
+  left: 140rpx;
+  width: 610rpx;
+  height: 160rpx;
+  margin-top: 4rpx;
+  background-color: white;
+  display: inline-block;
+}
+.name{
+  position: relative;
+  left: 40rpx;
+  top: 20rpx;
+}
+.lastMessage{
+  position: relative;
+  left: 45rpx;
+  top: 30rpx;
+  width: 550rpx;
+
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+.lastTime{
+  position: absolute;
+  top: -1rpx;
+  right: 20rpx;
+  font-size: 30rpx;
+}
+
+.hr{
+  position: relative;
+  top: 20rpx;
+  margin-top: 10rpx;
+  background-color: rgb(242, 244, 247);
+  height: 5rpx;
+  width: 100%;
+}
+
+.notReadNum{
+  position: absolute;
+  right: 30rpx;
+  top: 80rpx;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+}

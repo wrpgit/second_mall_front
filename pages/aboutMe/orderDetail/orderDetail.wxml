@@ -1,0 +1,54 @@
+<!--pages/aboutMe/orderDetail/orderDetail.wxml-->
+<view class="orderMessage">
+  <view wx:if="{{data.buyOpenid==openid}}">   <!-->我是订单发起者<-->
+    <view class="title">商家信息：
+      <image class="costumHeadImg" src="{{data.sailHeadAddress}}"></image>
+      <view class="custumName">{{data.sailUserName}}</view>
+    </view>
+  </view>
+  <view wx:else>   <!-->我是订单发起者<-->
+    <view>买家信息：
+      <image class="costumHeadImg" src="{{data.buyHeadAddress}}"></image>
+      <view class="custumName">{{data.buyUserName}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="head">
+  <image class="img" src="{{beforeURL}}{{data.goodsImage}}" bindtap="preView"></image>
+</view>
+ <view class="line"></view>
+<view class="body">
+  <view class="name">{{data.goodsName}}</view>
+ 
+  <view class="line"></view>
+  <view class="school">所属学校：{{school[data.schoolId]}}</view>
+ <view class="line"></view>
+  <textarea class="desc" disabled='true' selectable="true" value="{{data.description}}"></textarea>
+   <view class="line"></view>
+  <view class="orderId">订单编号：{{data.orderId}}</view>
+  <view class="orderTime">下单时间：{{data.addTime}}</view>
+  <view class="price">￥{{data.price}}</view>
+</view>
+<view class="bottom">
+  <view wx:if="{{data.buyOpenid == openid && data.orderStatus==1}}">
+      <button class="btn three" bindtap="cancelOrder">取消订单</button>
+      <button class="btn three" bindtap="buyFinish">货已到手</button>
+      <button class="btn contect three" bindtap="contect">联系商家</button> 
+  </view>
+  <view wx:elif="{{data.buyOpenid == openid && data.orderStatus!=1}}">
+      <view class="btn point two">订单已完成</view>
+      <button class="btn two" bindtap="contect">联系商家</button>
+  </view>
+   <view wx:elif="{{data.sailOpenid == openid && data.orderStatus==1}}">
+    <view class="btns">
+      <button class="btn two" bindtap="sailFinish">货以送达</button>
+      <button class="btn two" bindtap="contect">联系买家</button> 
+    </view>
+  </view>
+   <view wx:elif="{{data.sailOpenid == openid && data.orderStatus!=1}}">
+      <view class="btn point two">订单已完成</view>
+      <button class="btn two" bindtap="contect">联系买家</button> 
+  </view>
+</view>
+

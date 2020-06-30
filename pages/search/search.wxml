@@ -1,0 +1,24 @@
+<!--pages/search/search.wxml-->
+<view class='page_row' bindtap="suo">  
+  <view class="search">  
+    <view class="box">  
+      <icon class="searchicon" size='20' type='search'></icon>  
+      <input class="input" style="border-width:{{inputWidth}}" placeholder="请输入关键字" bindfocus='bindfocus' bindblur='bindblur' bindinput="inputSearch" value="{{context}}"/>
+    </view> 
+  </view>  
+  <view class='sousuo' bindtap="search" >搜索</view>  
+</view>
+
+<view class="bodyer">
+  <block wx:for="{{list}}" wx:key="navItems"  wx:for-item="item" wx:for-index="idx" data-id="{{idx}}" >
+      <view class='list' style="display:{{display}}" bindtap="toDetail" data-id="{{idx}}">
+        <image class='img' src="{{beforeURL}}{{item.goodsImage}}"></image>
+        <text class='name'>{{item.goodsName}}</text>
+        <text class='desc'>{{item.description}}</text>
+        <view class='price'>￥{{item.price}}</view>
+      </view>
+      <view class="line"></view>
+  </block>
+   <view style="display:{{isHaveMore}}" class="over">——  到底了哦  ——</view>
+</view>
+

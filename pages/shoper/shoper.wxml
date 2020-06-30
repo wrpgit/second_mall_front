@@ -1,0 +1,22 @@
+<!--pages/shoper/shoper.wxml-->
+
+<view class="shoperMessage" bindtap="toShoper">
+    <view class="title">该商家商品列表：
+    <image class="shoperHeadAddress" src="{{shoperInfo.headAddress}}"></image>
+    <view class="shoperName">{{shoperInfo.userName}}</view>
+  </view>
+</view>
+
+ <block wx:for="{{list}}" wx:key="navItems"  wx:for-item="item" wx:for-index="idx" data-id="{{idx}}" >
+      <view class='list' style="display:{{display}}" bindtap="toDetail" data-id="{{idx}}">
+        <!-- <view>{{idx}}</view> -->
+        <image class='img' src="{{beforeURL}}{{item.goodsImage}}"></image>
+        <text class='name'>{{item.goodsName}}</text>
+        <text class='desc'>{{item.description}}</text>
+        <view class='price'>￥{{item.price}}</view>
+      </view>
+      <view class="line"></view>
+  </block>
+  <view style="display:{{isHaveMore}}" class="over">——  到底了哦  ——</view>
+
+

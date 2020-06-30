@@ -1,0 +1,22 @@
+<!--pages/aboutMe/myBuy/myBuy.wxml-->
+
+<block wx:for="{{list}}" wx:key="navItems"  wx:for-item="item" wx:for-index="idx" data-id="{{idx}}" >
+      <view class='list' style="display:{{display}}" bindtap="toDetail" data-id="{{idx}}">
+        <view class="header">
+          <view class="title">商家信息: </view>
+          <image class="shoper_img" src="{{item.sailHeadAddress}}"></image>
+          <view class="shoper_name">{{item.sailUserName}}</view>
+        </view>
+        <view class="bodyer">
+          <image class='img' src="{{beforeURL}}{{item.goodsImage}}"></image>
+          <text class='name'>{{item.goodsName}}</text>
+          <text class='desc'>{{item.description}}</text>
+          <view class='price'>￥{{item.price}}</view>
+          </view>
+       </view>
+       <view class="line"></view>
+  </block>
+  <view style="display:{{isHaveMore}}" class="over">—— 到底了哦 ——</view>
+
+
+

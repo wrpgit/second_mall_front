@@ -1,0 +1,105 @@
+/* pages/updateGoods/updateGoods.wxss */
+body{
+  margin: 0;
+}
+
+.head{
+  width:100%;
+  height: 300rpx;
+  background:#fff;
+}
+.boxImage{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width:auto;
+} 
+.creama{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  float: left;
+  top: 60rpx;
+  width: 250rpx;
+  height: 200rpx;
+}
+.remove{
+  position: absolute;
+  top: 270rpx;
+  left: 43%;
+  width: 70rpx;
+  height: 70rpx;
+
+}
+.text1{
+  position: absolute;
+  top:300rpx;
+  left: 33%;
+}
+.bottom{
+  position: relative;
+  top: 20rpx;
+  margin: 20rpx;
+}
+input{
+  width:100%;
+  height: 100rpx;
+  font-size: 35rpx;
+  margin: 3rpx 0;
+}
+.line{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height:10rpx; 
+  background-color:rgb(242, 244, 247);
+}
+.line_css{
+  top: 10rpx;
+}
+.line_css2{
+  top: 50rpx;
+}
+.line_css3{
+  top: 80rpx;
+}
+.desc{
+  position: relative;
+  top :90rpx;
+  margin-top: 5rpx;
+  height: 220rpx; 
+   overflow:hidden;   /*超过2行添加省略号*/
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  padding-bottom: 50rpx;
+}
+.btn_add{
+  position: relative;
+  top: 50rpx;
+  width: 100%; 
+  background-color: rgb(6, 127, 187);
+  color: white;
+  height: 80rpx;
+  font-size: 35rpx;
+  margin-bottom: 20rpx;
+}
+
+.section{
+  position: relative;
+  top: 20rpx;
+  margin-top: 5rpx;
+  height: 35rpx;
+}
+
+.school{
+  position: relative;
+  top: 50rpx;
+  color:rgb(148, 141, 141);
+  margin-top: 5rpx;
+  height: 35rpx;
+}

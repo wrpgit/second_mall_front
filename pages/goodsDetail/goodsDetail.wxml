@@ -1,0 +1,42 @@
+<!--pages/goodsDetail/goodDetail.wxml-->
+
+<view class="shoperMessage" bindtap="toShoper">
+  <view class="title">商家信息：
+    <image class="shoperHeadAddress" src="{{shoperInfo.headAddress}}"></image>
+    <view class="shoperName">{{shoperInfo.userName}}</view>
+  </view>
+</view>
+
+<view class="head">
+  <image class="img" src="{{beforeURL}}{{goodsDetail.goodsImage}}" bindtap="preView"></image>
+</view>
+
+<view class="line"></view>
+
+<view class="body">
+  <view class="name">{{goodsDetail.goodsName}}</view>
+  
+<view class="line"></view>
+
+  <view class="school">所属学校：{{school[goodsDetail.schoolId]}}</view>
+
+<view class="line"></view>
+
+  <textarea class="desc" disabled='true' selectable="true" value="{{goodsDetail.description}}"></textarea>
+
+  <view class="line"></view>
+
+  <view class="goodsAddTime">商品创建时间：{{goodsDetail.addTime}}</view>
+  <view class="price">￥{{goodsDetail.price}}</view>
+</view>
+<view class="bottom">
+  <view wx:if="{{goodsDetail.openid == openid}}">
+    <button class="btn change" bindtap="change">修改信息</button>
+    <button class="btn cancel" bindtap="cancel">删除</button> 
+  </view>
+  <view wx:else>
+    <button class="btn makeOrder" bindtap="makeOrder">下单</button>
+    <button class="btn contect" bindtap="contect">联系卖家</button>
+  </view>
+</view>
+

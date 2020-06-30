@@ -1,0 +1,29 @@
+
+<view id="all"> 
+  <cover-view id="header">
+    <cover-view class="friendName">{{friendName}}</cover-view>
+    <cover-image class="friendHead" src="{{friendHeadAddress}}"></cover-image>
+  </cover-view>
+  <view id="body">
+    <block wx:for="{{message}}" wx:key="message" wx:for-item="item" wx:for-index="idx">
+      <text class='time'>{{item.time}}\n</text>
+
+        <view wx:if="{{item.fromOpenid == openid}}">
+          <view class="message">
+            <image class="head meHead" src="{{myHeadAddress}}"></image>
+            <textarea class='word meWord' disabled="true" auto-height="true" value="{{item.context}}"></textarea>
+          </view>
+        </view>
+        <view wx:else if="{{item.toOpenid == openid}}">
+          <view class="message">
+            <image class="head otherHead" src="{{friendHeadAddress}}"></image>
+            <textarea class='word otherWord' disabled="true"  auto-height="true" value="{{item.context}}"></textarea>
+          </view>
+        </view>
+      </block>
+  </view>
+  <view id="writeArea">
+    <textarea class="writeWord"  bindinput='inputWord' auto-height='true' maxlength='100' value='{{words}}' fixed='true' ></textarea>
+    <button id="sendMessage" bindtap='sendMessage'>发送</button>
+  </view>
+</view>

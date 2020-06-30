@@ -1,0 +1,39 @@
+<!--pages/aboutMe/aboutMe.wxml-->
+<view class="top">
+  <view class='userHead'> 
+    <open-data type="userAvatarUrl" class="userHead"></open-data>   
+  </view>
+  <view class="userName">
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+
+  <view wx:if="{{!hasAuth}}">
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindAuth" class="btn_auth"
+>点击登陆</button>
+  </view>
+
+</view>
+<view class='body'>
+  <view class="line"></view>
+  <view class="item thing" bindtap='myPublic'>我发布的    ></view>
+  <view class="line"></view>
+  <view class="item myOrder" bindtap='myOrder'>我的订单    ></view>
+  <view class="line"></view>
+  <view class="item otherOrder" bindtap='otherOrder'>别人的订单    ></view>
+  <view class="line"></view>
+  <view class="item schoolChange">
+    <picker bindchange="schoolChange" value="{{schoolIndex}}" range="{{school}}">
+      <view class="picker"> 
+          我的学校：{{school[schoolIndex]}}
+      </view>
+    </picker>
+  </view>
+<view class="line"></view>
+  <view class="item myBuy" bindtap='myBuy'>我买到的    ></view>
+  <view class="line"></view>
+  <view class="item mySail" bindtap='mySail'>我卖出的    ></view>
+  <view class="line"></view>
+  <view class="item reback" bindtap='reback'>意见反馈    ></view>
+  <view class="line"></view>
+   
+</view>

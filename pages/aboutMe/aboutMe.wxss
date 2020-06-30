@@ -1,0 +1,68 @@
+/* pages/aboutMe/aboutMe.wxss */
+.top{
+  position: absolute;
+  /* background-color: rgba(249, 89, 89, 0.877); */
+  background-color: rgb(6, 127, 187);
+  width:100%;
+  height: 240rpx;
+}
+
+.userHead{
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userName{
+  font-size: 50rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 250rpx;
+  margin: 2rpx;
+}
+
+
+.body{
+  width:100%;
+  position: absolute;
+  top: 230rpx;
+}
+.item{
+  position: relative;
+  margin-top: 20rpx;
+  width: 100%;
+  padding-left: 20rpx;
+  line-height: 90rpx;
+  height: 90rpx;
+  background-color: white;
+}
+.thing{
+  background-color: white;
+
+}
+.reback{
+  background-color: white;
+}
+
+.btn_auth{
+  top: 143rpx;
+  left: 94px;
+  width: 250rpx;
+  color: black;
+  border: none;
+  background-color: white;
+  height: 70rpx;
+  font-size: 35rpx;
+  line-height: 68rpx;
+}
+
+.line{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height:10rpx; 
+  background-color:rgb(242, 244, 247);
+}

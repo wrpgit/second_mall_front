@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/messageList/messageList",
+    "pages/messageList/message/message",
+    "pages/addGoods/addGoods",
+    "pages/aboutMe/aboutMe",
+    "pages/myPublic/myPublic",
+    "pages/goodsDetail/goodsDetail",
+    "pages/updateGoods/updateGoods",
+    "pages/aboutMe/myOrder/myOrder", 
+    "pages/aboutMe/otherOrder/otherOrder",
+    "pages/aboutMe/myBuy/myBuy",
+    "pages/aboutMe/mySail/mySail",
+    "pages/aboutMe/orderDetail/orderDetail",
+    "pages/aboutMe/reback/reback",
+    "pages/search/search",
+    "pages/shoper/shoper"
+  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "大学生闲置物品交易",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home_join.png"
+      },
+      {
+        "pagePath": "pages/messageList/messageList",
+        "text": "消息",
+        "iconPath": "image/message.png",
+        "selectedIconPath": "image/message_join.png"
+      },
+      {
+        "pagePath": "pages/addGoods/addGoods",
+        "text": "发布",
+        "iconPath": "image/add.png",
+        "selectedIconPath": "image/add_join.png"
+      },
+      {
+        "pagePath": "pages/aboutMe/aboutMe",
+        "text": "我",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mine_join.png"
+      }
+    ]
+  },
+ 
+  "sitemapLocation": "sitemap.json"
+}

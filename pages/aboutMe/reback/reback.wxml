@@ -1,0 +1,9 @@
+<!--pages/aboutMe/reback/reback.wxml-->
+  <view class="line"></view>
+<view class="box">
+  <textarea class="message" bindinput="inputMessage" placeholder="您的反馈是我们进步的动力，欢迎各种建议"></textarea>
+</view>
+<button class="sub" bindtap="submit">提交</button>
+  <view class="line"></view>
+
+  

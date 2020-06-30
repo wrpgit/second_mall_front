@@ -1,0 +1,30 @@
+<view class='page_row' bindtap="suo">  
+  <view class="search">  
+    <view class="box">  
+      <icon class="searchicon" size='20' type='search'></icon>  
+      <input class="input" style="border-width:{{inputWidth}}" placeholder="请输入关键字" bindfocus='bindfocus' value="{{context}}"/>
+    </view> 
+  </view>  
+  <view class='sousuo' bindtap="search">搜索</view>
+</view>
+
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view>
+
+<view class='goodsMessage'>
+  <!-- <view>一共有{{len}}个此类物品</view> -->
+  <block wx:for="{{list}}" wx:key="navItems"  wx:for-item="item" wx:for-index="idx" data-id="{{idx}}" >
+      <view class='list' style="display:{{display}}" bindtap="toDetail" data-id="{{idx}}">
+        <!-- <view>{{idx}}</view> -->
+        <image class='img' src="{{beforeURL}}{{item.goodsImage}}"></image>
+        <text class='name'>{{item.goodsName}}</text>
+        <text class='desc'>{{item.description}}</text>
+        <view class='money'>￥{{item.price}}</view>
+        <view class="line"></view>
+        <!-- <view class='contactHe' bindtap="contect" data-id="{{idx}}">联系他</view> -->
+      </view>
+  </block>
+  <view style="display:{{isHaveMore}}" class="over">——  到底了哦  ——</view>
+</view>
+

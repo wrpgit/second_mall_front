@@ -1,0 +1,29 @@
+<!--pages/messageList/messageList.wxml-->
+<view id="all">
+  <view id="top">消息</view>
+    <view class="context" wx:for="{{messageList}}" wx:key="messageList" wx:for-item="item" wx:for-index="idx" bindtap='showDetail' data-id="{{idx}}">
+
+      <block wx:if="{{openid == item.toOpenid}}">
+          <!-- <block wx:if="true"> -->
+          <image class='head' src="{{item.fromHeadAddress}}"></image>
+            <view class='box'>
+              <view class='name'>{{item.fromName}}</view>
+              <text class='lastMessage'>{{item.lastMessage}}</text>
+              <text class='lastTime'>{{item.lastTime}}</text>
+              <block wx:if="{{item.notReadNum > 0}}">
+                <view class='notReadNum'>{{item.notReadNum}}</view>
+              </block>
+            </view>
+          <view class='hr'></view>
+      </block>
+      <block wx:else if="{{item.fromOpenid == openid}}">
+          <image class='head' src="{{item.toHeadAddress}}"></image>
+            <view class='box'>
+              <view class='name'>{{item.toName}}</view>
+              <text class='lastMessage'>{{item.lastMessage}}</text>
+              <text class='lastTime'>{{item.lastTime}}</text>
+            </view>
+          <view class='hr'></view>
+      </block>
+  </view>
+</view>

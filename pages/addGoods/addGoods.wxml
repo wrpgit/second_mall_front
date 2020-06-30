@@ -1,0 +1,48 @@
+<!--pages/addGoods/addGoods.wxml-->
+<view class='head'>
+  <view wx:if="{{imgs.length == 2}}">
+    <image class='creama' src="{{imgs[0]}}" bindtap="preView"></image>
+    <image class='remove' src="/image/addGoods/remove.jpg" bindtap="removeImage"></image>
+  </view>
+  <view wx:elif="{{imgs.length == 1}}">
+    <image class='creama' src="{{imgs[0]}}" bindtap='addImage'></image>
+  </view> 
+</view>
+
+<view class="line line_css" style='height:30rpx;'></view>
+
+<view class='bottom'> 
+
+  <input class="make_name" placeholder='请输入物品的名字' bindinput='goodsName' value='{{name}}'></input>
+  <view class='line '></view>
+
+
+<view class="line line_css1"></view>
+
+<view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{navbar}}">
+        <view class="picker">
+          物品分类：{{navbar[index]}}
+        </view>
+      </picker>
+</view>
+
+<view class="line line_css2"></view>
+
+<view class="school">
+  <picker bindchange="schoolChange" value="{{schoolIndex}}" range="{{school}}">
+    <view class="picker">
+        所属学校：{{school[schoolIndex]}}
+    </view>
+  </picker>
+</view>
+
+<view class="line line_css3"></view>
+
+  <textarea class="desc" placeholder='在此描述你的物品：如作者,版数,新旧等,以及希望在哪进行交易' bindinput='goodsDesc' value='{{desc}}' maxlength='127'></textarea>
+  <view class='line line_css'></view>
+  <input class="value" type='number' placeholder='请输入价格(单位：元)' bindinput='goodsPrice' value='{{price}}'></input>
+ 
+  <view class='line line_css'></view>
+</view>
+<button class="btn_add" bindtap='submitForm'>发布</button>
